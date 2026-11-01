@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Student Placement Analysis</h1>
+        <p>Analysis and Insights</p>
+    </header>
+
+    <main class="home-container">
+        <h2>Placement Report</h2>
+
+        <div class="card">
+            <h3>Total Students</h3>
+            <p>{{ summary.total_students }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Placed Students</h3>
+            <p>{{ summary.placed_students }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Not Placed Students</h3>
+            <p>{{ summary.not_placed_students }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Overall Placement Rate</h3>
+            <p>{{ summary.placement_percentage }}%</p>
+        </div>
+
+        <h2>Project Insights</h2>
+
+        <p>
+            This system analyzes student placement information
+            to understand placement performance.
+        </p>
+
+        <p>
+            It helps compare placed and not placed students
+            and understand overall placement results.
+        </p>
+
+        <div class="buttons">
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/students">Students</a>
+        </div>
+    </main>
+
+</body>
+</html>

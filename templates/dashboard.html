@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Placement Dashboard</h1>
+        <p>Student Placement Statistics</p>
+    </header>
+
+    <main class="home-container">
+        <h2>Placement Overview</h2>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p>{{ summary.total_students }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Placed Students</h3>
+                <p>{{ summary.placed_students }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Not Placed</h3>
+                <p>{{ summary.not_placed_students }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Placement Percentage</h3>
+                <p>{{ summary.placement_percentage }}%</p>
+            </div>
+
+            <div class="card">
+                <h3>Average CGPA</h3>
+                <p>{{ average_cgpa }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Salary</h3>
+                <p>₹{{ average_salary }}</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="/">Home</a>
+            <a href="/students">View Students</a>
+            <a href="/analysis">View Analysis</a>
+        </div>
+    </main>
+
+</body>
+</html>
